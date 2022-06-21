@@ -16,12 +16,10 @@ class Word
     @word.each_char { |letter|
       score += @scores.fetch(letter)
     }
-    return score #does it have to have keyword return? I think so
+    return score
+  end
+
+  def scrabble
+    @word.reverse().upcase()
   end
 end
-
-#I like the way this person did it, I didn't use a hash initially (if statement),
-#but I agree, Hash is cleaer
-
-
-#https://github.com/drewjparker91/scrabbleScore/blob/master/lib/scrabbleScore.rb
